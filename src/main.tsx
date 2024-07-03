@@ -1,13 +1,14 @@
+import { createTheme, ThemeProvider } from "@mui/material";
+import axios from "axios";
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.tsx";
-import "./index.css";
-import { createTheme, ThemeProvider } from "@mui/material";
-import { BrowserRouter } from "react-router-dom";
-import { AuthProvider } from "./context/AuthContext.tsx";
 import { Toaster } from "react-hot-toast";
-import axios from "axios";
-axios.defaults.baseURL = "http://localhost:5000/api/v1";
+import { BrowserRouter } from "react-router-dom";
+import App from "./App.tsx";
+import { AuthProvider } from "./context/AuthContext.tsx";
+import "./index.css";
+axios.defaults.baseURL =
+  "https://chat-ai-backend-6ex63mced-ajfahims-projects.vercel.app/api/v1";
 axios.defaults.withCredentials = true;
 const theme = createTheme({
   typography: {
